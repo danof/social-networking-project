@@ -1,0 +1,8 @@
+{
+  "name": "socialapp",
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "mongoose": "^3.8.19"
+  }
+}
