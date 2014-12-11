@@ -1,7 +1,7 @@
 angular.module('app')
-.controller('LoginCtrl', function ($scope, UserSvc) {
-  $scope.login = function (username, password) {
-    UserSvc.login(username, password)
+.controller('RegisterCtrl', function ($scope, UserSvc) {
+  $scope.register = function (username, password) {
+    UserSvc.register(username, password)
     .then(function (response) {
       $scope.$emit('login', response.data)
       $scope.username = null

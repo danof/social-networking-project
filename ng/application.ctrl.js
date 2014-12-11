@@ -3,4 +3,7 @@ angular.module('app')
   $scope.$on('login', function (_, user) {
     $scope.currentUser = user
   })
+  $scope.logout = function () {
+    delete $scope.currentUser
+  }
 })

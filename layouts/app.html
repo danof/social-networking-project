@@ -9,10 +9,12 @@
     <div class='container'>
       <ul class='nav navbar-nav'>
         <li><a href="/#/">Posts</a></li>
-        <li><a href="/#/register">Register</a></li>
-        <li><a href="/#/login">Login</a></li>
+        <li ng-if='!currentUser'><a href="/#/register">Register</a></li>
+        <li ng-if='!currentUser'><a href="/#/login">Login</a></li>
+        <li ng-if='currentUser'><a ng-click='logout()'>Logout</a></li>
       </ul>
-      <p ng-if='currentUser' class="navbar-text navbar-right">Signed in as {{currentUser.username}}</p>
+
+      <p ng-if='currentUser' class='nav navbar-text navbar-right'>Signed in as {{currentUser.username}}</p>
     </div>
   </nav>
   <div ng-view></div>
